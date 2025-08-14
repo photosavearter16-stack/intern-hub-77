@@ -288,6 +288,70 @@ const Dashboard: React.FC<DashboardProps> = ({
           </Card>
         </div>
 
+        {/* Student Submit Project Section */}
+        <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 border-2 border-blue-200 dark:border-blue-800 mb-8">
+          <CardHeader>
+            <CardTitle className="text-blue-800 dark:text-blue-200 flex items-center gap-2">
+              <Upload className="w-5 h-5" />
+              Submit Your Projects
+            </CardTitle>
+            <CardDescription className="text-blue-600 dark:text-blue-300">
+              Upload your completed projects by providing your GitHub repository links
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="grid gap-4">
+              <div className="space-y-3">
+                <Label htmlFor="project1-github" className="text-sm font-medium text-blue-700 dark:text-blue-300">
+                  Project 1: E-commerce Website
+                </Label>
+                <div className="flex gap-2">
+                  <Input
+                    id="project1-github"
+                    placeholder="https://github.com/yourusername/ecommerce-project"
+                    className="flex-1"
+                  />
+                  <Button variant="outline" size="sm" className="border-blue-300 text-blue-700 hover:bg-blue-50">
+                    Submit
+                  </Button>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Status: <span className="text-amber-600 font-medium">Pending Submission</span>
+                </p>
+              </div>
+              
+              <div className="space-y-3">
+                <Label htmlFor="project2-github" className="text-sm font-medium text-blue-700 dark:text-blue-300">
+                  Project 2: Task Management App
+                </Label>
+                <div className="flex gap-2">
+                  <Input
+                    id="project2-github"
+                    placeholder="https://github.com/yourusername/task-manager"
+                    className="flex-1"
+                  />
+                  <Button variant="outline" size="sm" className="border-blue-300 text-blue-700 hover:bg-blue-50">
+                    Submit
+                  </Button>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Status: <span className="text-amber-600 font-medium">Pending Submission</span>
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+              <h4 className="font-medium text-blue-800 dark:text-blue-200 mb-2">Submission Guidelines:</h4>
+              <ul className="text-sm text-blue-600 dark:text-blue-300 space-y-1">
+                <li>• Ensure your repository is public</li>
+                <li>• Include a detailed README.md file</li>
+                <li>• Add proper commit messages</li>
+                <li>• Test your project before submission</li>
+              </ul>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* Additional Resources */}
         <Card className="bg-gradient-secondary border-border shadow-elegant">
           <CardHeader>
